@@ -65,7 +65,6 @@ public class OnAirSync {
 	    };
 
 		while(true);
-		return 0;
 	}
 
 	public static void PrintState() {
