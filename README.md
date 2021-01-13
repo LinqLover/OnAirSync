@@ -11,7 +11,7 @@ Works for Win32 apps only (no Linux, no UWP apps).
 - Extract it
 - Execute it using `OnAirSync -i <your_openHAB_item_name>`
 
-For better convenience, you may want to create an automated task in the Windows scheduled task settings (trigger: on log-on, action: start `cmd.exe /c start "" C:\path\to\OnAirSync.exe -i <your_openHAB_item_name>`).
+For better convenience, you may want to create an automated task in the Windows scheduled task settings (trigger: on log-on, action: start `cmd.exe /c "start /b C:\path\to\OnAirSync.exe -i <your_openHAB_item_name>"`).
 
 ## Development
 
