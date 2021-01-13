@@ -1,6 +1,6 @@
 # OnAirSync
 
-[![.github/workflows/build.yml](https://github.com/LinqLover/OnAirSync/workflows/.github/workflows/build.yml/badge.svg)](https://github.com/LinqLover/OnAirSync/actions) [![https://github.com/LinqLover/OnAirSync/releases](https://img.shields.io/github/v/release/LinqLover/OnAirSync.svg)](https://github.com/LinqLover/OnAirSync/releases)
+[![.github/workflows/build.yml](https://github.com/LinqLover/OnAirSync/workflows/.github/workflows/build.yml/badge.svg)](https://github.com/LinqLover/OnAirSync/actions) [![latest release](https://img.shields.io/github/v/release/LinqLover/OnAirSync.svg)](https://github.com/LinqLover/OnAirSync/releases)
 
 Automatically monitor whether you are in a (video) call and push updates to openHAB.
 Works for Win32 apps only (no Linux, no UWP apps).
