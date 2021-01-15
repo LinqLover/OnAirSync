@@ -40,7 +40,7 @@ public class OnAirSync {
 			});
 
 		Console.WriteLine("OnAirSync [STARTING]");
-		PrintState();
+		UpdateState();
 		Console.WriteLine();
 		Console.WriteLine("OnAirSync [READY]");
 		Console.WriteLine();
@@ -73,9 +73,8 @@ public class OnAirSync {
 			Console.WriteLine($"{device} is {(IsDeviceOn(device) ? "ON" : "OFF")}");
 		}
 	}
-
-	private static void OnRegChanged(object sender, EventArgs e) {
-		Console.WriteLine("[{0:s}] UPDATE:", DateTime.Now);
+	
+	public static void UpdateState() {
 		PrintState();
 
 		var state = Devices.Any(IsDeviceOn);
@@ -84,6 +83,11 @@ public class OnAirSync {
 		Console.Write(" ");
 		Console.WriteLine("Done.");
 		Console.WriteLine();
+	}
+
+	private static void OnRegChanged(object sender, EventArgs e) {
+		Console.WriteLine("[{0:s}] UPDATE:", DateTime.Now);
+		UpdateState();
 	}
 
 	private static void UpdateOpenHab(bool state) {
@@ -96,7 +100,9 @@ public class OnAirSync {
 	}
 	
 	private static bool IsDeviceOn(string device) {
-		return GetDeviceUsers(device).Any();
+		var users = GetDeviceUsers(device).ToList();
+		Console.WriteLine($"Users of {device}: {string.Join(", ", users)}");
+		return users.Any();
 	}
 
 	private static IEnumerable<string> GetDeviceUsers(string device) {
