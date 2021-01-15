@@ -100,7 +100,9 @@ public class OnAirSync {
 	}
 	
 	private static bool IsDeviceOn(string device) {
-		return GetDeviceUsers(device).Any();
+		var users = GetDeviceUsers(device).ToList();
+		Console.WriteLine($"Users of {device}: {string.Join(", ", users)}");
+		return users.Any();
 	}
 
 	private static IEnumerable<string> GetDeviceUsers(string device) {
