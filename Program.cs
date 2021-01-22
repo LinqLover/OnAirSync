@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading;
 
 using CommandLine;
 using Microsoft.Win32;
@@ -64,7 +65,9 @@ public class OnAirSync {
 			Console.WriteLine("OnAirSync [EXIT]");
 	    };
 
-		while(true);
+		Thread.Sleep(Timeout.Infinite);
+
+		return 0;
 	}
 
 	public static void PrintState() {
