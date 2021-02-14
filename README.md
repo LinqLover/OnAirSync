@@ -2,8 +2,9 @@
 
 [![.github/workflows/build.yml](https://github.com/LinqLover/OnAirSync/workflows/.github/workflows/build.yml/badge.svg)](https://github.com/LinqLover/OnAirSync/actions) [![latest release](https://img.shields.io/github/v/release/LinqLover/OnAirSync.svg)](https://github.com/LinqLover/OnAirSync/releases)
 
-Automatically monitor whether you are in a (video) call and push updates to openHAB.
+Automatically monitor whether you are in a (video) call and push updates to [openHAB](http://www.openhab.org/).
 Works for Win32 apps only (no Linux, no UWP apps).
+For more information, also read the [official announcement thread in the openHAB Community forum](https://community.openhab.org/t/ann-onairsync-let-openhab-know-when-you-are-in-a-meeting/116991?u=linqlover).
 
 ## Installation
 
